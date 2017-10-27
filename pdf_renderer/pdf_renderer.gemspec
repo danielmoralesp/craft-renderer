@@ -17,6 +17,14 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
   s.add_dependency "rails", "~> 5.0.6"
+  s.add_dependency "prawn", "0.12.0"
+
+  # example render pdf in irb
+  # $ irb
+  # Inside irb, let’s create a sample PDF: require "prawn"
+  # pdf = Prawn::Document.new
+  # pdf.text("A PDF in four lines of code") pdf.render_file("sample.pdf")
+  # Exit irb, and you can see a PDF file in the directory in which you started the irb session
 
   s.add_development_dependency "sqlite3"
 end
